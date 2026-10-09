@@ -1,0 +1,13 @@
+# Python env
+.venv/
+
+# Model weights (tens of GB, downloaded separately)
+models/
+
+# stable-diffusion.cpp: upstream clone + local Metal build
+sdcpp/
+
+# Generated images and videos
+outputs/
+
+.DS_Store
