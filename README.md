@@ -4,6 +4,9 @@ Alibaba's official **Qwen-Image-2.1** for images, running on this Mac with [mflu
 and **MiniMax-H3** for video with sound (see [Video with sound](#video-with-sound-minimax-h3)).
 Everything runs offline: prompts, images and videos never leave the machine, and there is no content filter.
 
+> **Paused on 2026-10-09.** The models were deleted to free disk space. See [HANDOFF.md](HANDOFF.md) for where we
+> stopped and the exact steps to bring everything back.
+
 ## Make an image
 
 ```bash
@@ -103,24 +106,11 @@ first, restart the Mac now and then to clear swap, and start runs with `caffeina
 
 | | |
 |---|---|
-| Model weights (33 GB, verified) | `~/.cache/huggingface` (shared Hugging Face cache) |
-| mflux 0.21 and its Python environment | `.venv` in this folder |
-| Video model, MiniMax-H3 4-bit + text encoder + decoders (43 GB, verified) | `models/h3` |
-| Video tool ([stable-diffusion.cpp](https://github.com/leejet/stable-diffusion.cpp), MIT, built for Metal) | `sdcpp/` |
-| Results | `outputs/` |
-
-## Setting up from a fresh clone
-
-Model weights, the Python environment, the video tool and results are not in git. To rebuild them:
-
-```bash
-uv sync
-git clone https://github.com/leejet/stable-diffusion.cpp sdcpp
-git -C sdcpp checkout a1ded76 && git -C sdcpp submodule update --init --recursive
-cmake -S sdcpp -B sdcpp/build -DSD_METAL=ON && cmake --build sdcpp/build --config Release
-```
-
-Then download the video model files into `models/h3` (see the table above).
+| Model weights (33 GB, deleted 2026-10-09) | `~/.cache/huggingface` (shared Hugging Face cache) |
+| mflux 0.21 and its Python environment (deleted; `uv sync` restores it) | `.venv` in this folder |
+| Video model, MiniMax-H3 4-bit + text encoder + decoders (43 GB, deleted 2026-10-09) | `models/h3` |
+| Video tool ([stable-diffusion.cpp](https://github.com/leejet/stable-diffusion.cpp), MIT, built for Metal; deleted) | `sdcpp/` |
+| Results (kept, not in git) | `outputs/` |
 
 ## License
 
