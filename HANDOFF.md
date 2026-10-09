@@ -1,7 +1,6 @@
 # Handoff: where this project stands (paused 2026-10-09)
 
-The project is **paused**. On 2026-10-09 the model weights, the Python environment and the video tool were deleted to
-free about 75 GB of disk for other work. The scripts, the README and this file are all you need to bring it back.
+The project is **paused**. On 2026-10-09 the model weights were deleted to free about 75 GB of disk for other work. The scripts, the README and this file are all you need to bring it back.
 Nothing was lost that can't be downloaded again.
 
 ## Where we stopped
@@ -26,11 +25,11 @@ Nothing was lost that can't be downloaded again.
 |---|---|---|
 | Qwen-Image-2.1 official weights, revision `d26bb61231c349cf6b7896fa83353113880e1ba3` | `~/.cache/huggingface/hub/models--Qwen--Qwen-Image-2.1` | 33.1 GB |
 | MiniMax-H3 video model + text encoder + decoders | `models/h3/` | 43 GB |
-| stable-diffusion.cpp source + Metal build | `sdcpp/` | 0.8 GB |
-| Python environment (mflux 0.21.0, Python 3.14) | `.venv/` | 1.1 GB |
 
 The Viggle turbo add-on (LoRA) was already gone from the cache before this cleanup; re-download it (step 2 below).
-Kept: `outputs/` (your images and videos, not in git) and the unrelated `Systran/faster-whisper-base` and
+Still on disk (useless without the models, safe to delete any time): `sdcpp/` (stable-diffusion.cpp source + Metal
+build, 0.8 GB) and `.venv/` (mflux 0.21.0 on Python 3.14, 1.1 GB). If they're gone, steps 1 and 3 below rebuild them.
+Also kept: `outputs/` (your images and videos, not in git) and the unrelated `Systran/faster-whisper-base` and
 `Qwen/Qwen2.5-1.5B` cache entries, which belong to other projects.
 
 ## Bring it back

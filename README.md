@@ -107,9 +107,9 @@ first, restart the Mac now and then to clear swap, and start runs with `caffeina
 | | |
 |---|---|
 | Model weights (33 GB, deleted 2026-10-09) | `~/.cache/huggingface` (shared Hugging Face cache) |
-| mflux 0.21 and its Python environment (deleted; `uv sync` restores it) | `.venv` in this folder |
+| mflux 0.21 and its Python environment (`uv sync` restores it) | `.venv` in this folder |
 | Video model, MiniMax-H3 4-bit + text encoder + decoders (43 GB, deleted 2026-10-09) | `models/h3` |
-| Video tool ([stable-diffusion.cpp](https://github.com/leejet/stable-diffusion.cpp), MIT, built for Metal; deleted) | `sdcpp/` |
+| Video tool ([stable-diffusion.cpp](https://github.com/leejet/stable-diffusion.cpp), MIT, built for Metal) | `sdcpp/` |
 | Results (kept, not in git) | `outputs/` |
 
 ## License
